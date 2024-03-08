@@ -13,6 +13,7 @@ import {
 } from "react-icons/fc";
 import { HiXMark } from "react-icons/hi2";
 import Image from "next/image";
+import Link from "next/link";
 
 const navigation = [
   { name: "Dashboard", href: "/dashboard", icon: FcHome, current: true },
@@ -119,7 +120,7 @@ export default function Navbar({
                     </div>
                     <nav className="mt-5 space-y-1 px-2">
                       {navigation.map((item) => (
-                        <a
+                        <Link
                           key={item.name}
                           href={item.href}
                           className={classNames(
@@ -139,12 +140,12 @@ export default function Navbar({
                             aria-hidden="true"
                           />
                           {item.name}
-                        </a>
+                        </Link>
                       ))}
                     </nav>
                   </div>
                   <div className="flex flex-shrink-0 bg-gray-700 p-4">
-                    <a href="#" className="group block flex-shrink-0">
+                    <Link href="#" className="group block flex-shrink-0">
                       <div className="flex items-center">
                         <div>
                           <Image
@@ -164,7 +165,7 @@ export default function Navbar({
                           </p>
                         </div>
                       </div>
-                    </a>
+                    </Link>
                   </div>
                 </Dialog.Panel>
               </Transition.Child>
@@ -191,7 +192,7 @@ export default function Navbar({
               </div>
               <nav className="mt-5 flex-1 space-y-1 px-2">
                 {navigation.map((item) => (
-                  <a
+                  <Link
                     key={item.name}
                     href={item.href}
                     className={classNames(
@@ -211,12 +212,12 @@ export default function Navbar({
                       aria-hidden="true"
                     />
                     {item.name}
-                  </a>
+                  </Link>
                 ))}
               </nav>
             </div>
             <div className="flex flex-shrink-0 bg-gray-700 p-4">
-              <a href="#" className="group block w-full flex-shrink-0">
+              <Link href="#" className="group block w-full flex-shrink-0">
                 <div className="flex items-center">
                   <div>
                     <Image
@@ -234,7 +235,7 @@ export default function Navbar({
                     </p>
                   </div>
                 </div>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
