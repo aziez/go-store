@@ -9,5 +9,6 @@
     "ms-vscode.vscode-react", // React Snippet (by Microsoft)
     "dbaeumer.vscode-eslint", // ESLint
     "windicss.vscode-windicss" // Tailwind CSS IntelliSense
-  ]
+  ],
+  "CodeGPT.apiKey": "OpenAI"
 }
