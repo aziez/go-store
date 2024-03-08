@@ -1,4 +1,8 @@
+"use client";
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { FcAutomotive } from "react-icons/fc";
+import { ClipLoader, RiseLoader, SyncLoader } from "react-spinners";
 
 export default function Home() {
   return (
@@ -25,6 +29,16 @@ export default function Home() {
               priority
             />
           </a>
+          <Button variant={"secondary"}>
+            <ClipLoader
+              color="grey"
+              // loading={true}
+              size={24}
+              aria-label="Loading Spinner"
+            />
+            Loading
+            <FcAutomotive className="w-[24px] h-[24px] mx-2 animate-bounce" />
+          </Button>
         </div>
       </div>
 
