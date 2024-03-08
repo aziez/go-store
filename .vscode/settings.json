@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode", // Prettier - Code formatter
+    "junhan.auto-close-tag", // Auto Close Tag
+    "steoates.autoimport", // Auto Import
+    "junhan.auto-rename-tag", // Auto Rename Tag
+    "aaronbond.better-comments", // Better Comments
+    "eamodio.vscode-errorlens", // Error Lens
+    "ms-vscode.vscode-react", // React Snippet (by Microsoft)
+    "dbaeumer.vscode-eslint", // ESLint
+    "windicss.vscode-windicss" // Tailwind CSS IntelliSense
+  ]
+}
