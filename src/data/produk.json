@@ -1,0 +1,90 @@
+[
+  {
+    "id_produk": 1,
+    "nama_produk": "Buku Tulis A5 Spiral",
+    "harga": 15000,
+    "stok": 100,
+    "id_kategori": 1,
+    "gambar": "buku_tulis_a5.jpg"
+  },
+  {
+    "id_produk": 2,
+    "nama_produk": "Buku Catatan Hardcover",
+    "harga": 25000,
+    "stok": 80,
+    "id_kategori": 1,
+    "gambar": "buku_catatan_hardcover.jpg"
+  },
+  {
+    "id_produk": 3,
+    "nama_produk": "Kertas HVS A4 80gsm",
+    "harga": 30000,
+    "stok": 200,
+    "id_kategori": 1,
+    "gambar": "kertas_hvs_a4.jpg"
+  },
+  {
+    "id_produk": 4,
+    "nama_produk": "Kertas Kado Motif",
+    "harga": 12000,
+    "stok": 150,
+    "id_kategori": 2,
+    "gambar": "kertas_kado_motif.jpg"
+  },
+  {
+    "id_produk": 5,
+    "nama_produk": "Pita Kado Warna-warni",
+    "harga": 5000,
+    "stok": 100,
+    "id_kategori": 2,
+    "gambar": "pita_kado_warna_warni.jpg"
+  },
+  {
+    "id_produk": 6,
+    "nama_produk": "Topi Pesta Glitter",
+    "harga": 8000,
+    "stok": 50,
+    "id_kategori": 3,
+    "gambar": "topi_pesta_glitter.jpg"
+  },
+  {
+    "id_produk": 7,
+    "nama_produk": "Balon Warna Pastel",
+    "harga": 3000,
+    "stok": 120,
+    "id_kategori": 3,
+    "gambar": "balon_warna_pastel.jpg"
+  },
+  {
+    "id_produk": 8,
+    "nama_produk": "Set Amplop Elegan",
+    "harga": 10000,
+    "stok": 80,
+    "id_kategori": 4,
+    "gambar": "set_amplop_elegan.jpg"
+  },
+  {
+    "id_produk": 9,
+    "nama_produk": "Stempel Personal",
+    "harga": 15000,
+    "stok": 60,
+    "id_kategori": 4,
+    "gambar": "stempel_personal.jpg"
+  },
+  {
+    "id_produk": 10,
+    "nama_produk": "Pensil Warna Faber-Castell",
+    "harga": 7000,
+    "stok": 90,
+    "id_kategori": 5,
+    "gambar": "pensil_warna_faber_castell.jpg"
+  },
+  {
+    "id_produk": 11,
+    "nama_produk": "Buku Agenda Kulit",
+    "harga": 20000,
+    "stok": 70,
+    "id_kategori": 5,
+    "gambar": "buku_agenda_kulit.jpg"
+  }
+]
