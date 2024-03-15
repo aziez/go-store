@@ -10,5 +10,5 @@
     "dbaeumer.vscode-eslint", // ESLint
     "windicss.vscode-windicss" // Tailwind CSS IntelliSense
   ],
-  "CodeGPT.apiKey": "OpenAI"
+  "CodeGPT.apiKey": "CodeGPT Plus Beta"
 }

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import {
   FcBarChart,
@@ -14,9 +14,10 @@ import {
 import { HiXMark } from "react-icons/hi2";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 
 const navigation = [
-  { name: "Dashboard", href: "/dashboard", icon: FcHome, current: true },
+  { name: "Dashboard", href: "/dashboard", icon: FcHome, current: false },
   {
     name: "Produk",
     href: "/dashboard/products",
@@ -52,6 +53,21 @@ export default function Navbar({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const pathname = usePathname();
+  const [updatedNavigation, setUpdatedNavigation] = useState(navigation);
+
+  useEffect(() => {
+    navigation.map((item) => ({
+      ...item,
+      current: item.href === pathname,
+    }));
+    const updatedNav = navigation.map((item) => ({
+      ...item,
+      current: item.href === pathname,
+    }));
+
+    setUpdatedNavigation(updatedNav);
+  }, [pathname]);
 
   return (
     <>
@@ -119,7 +135,7 @@ export default function Navbar({
                       />
                     </div>
                     <nav className="mt-5 space-y-1 px-2">
-                      {navigation.map((item) => (
+                      {updatedNavigation.map((item) => (
                         <Link
                           key={item.name}
                           href={item.href}
@@ -191,7 +207,7 @@ export default function Navbar({
                 />
               </div>
               <nav className="mt-5 flex-1 space-y-1 px-2">
-                {navigation.map((item) => (
+                {updatedNavigation.map((item) => (
                   <Link
                     key={item.name}
                     href={item.href}

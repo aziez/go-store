@@ -1,20 +1,19 @@
+import LoginWithEmail from "@/components/pages/Auth/LoginForm";
+
 function Page() {
   return (
     <div>
-      <h1>Sign-in</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
-        non nostrum ipsam incidunt dolor, labore perferendis? Tenetur earum
-        harum rem impedit, qui iure modi nesciunt voluptatibus in sed culpa hic,
-        laudantium itaque iste dicta nihil commodi doloremque placeat sit
-        voluptates id debitis odit odio quam? Nihil dolor excepturi voluptates
-        dolorum vitae repudiandae repellat blanditiis, beatae ut eligendi ex
-        quos rem maiores quidem accusantium omnis sunt. Quae ad officiis
-        suscipit dignissimos optio laborum, nam deleniti omnis rem eligendi
-        explicabo laboriosam, ex, veniam odio mollitia! Dignissimos ex corporis,
-        expedita eum provident dolorum ipsum id, veritatis laboriosam ducimus
-        eveniet libero esse cumque architecto!
-      </p>
+      <div className="relative mt-6">
+        <div className="absolute inset-0 flex items-center" aria-hidden="true">
+          <div className="w-full border-t border-gray-300" />
+        </div>
+        <div className="relative flex justify-center text-sm">
+          <span className="bg-white px-2 text-gray-500">
+            Login to your account
+          </span>
+        </div>
+      </div>
+      <LoginWithEmail />
     </div>
   );
 }
