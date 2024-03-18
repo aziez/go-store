@@ -1,3 +1,5 @@
+"use client";
+
 import {
   AlertDialog,
   AlertDialogAction,
@@ -9,6 +11,8 @@ import {
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
 import { Button } from "@/components/ui/button";
+import { useDeleteMutation } from "@/utils/mutation/useMutationHook";
+import { useState } from "react";
 import { FcEmptyTrash } from "react-icons/fc";
 
 interface DeleteInterface {
@@ -18,11 +22,25 @@ interface DeleteInterface {
 }
 
 function AlertDelete({ id, nama_kategori }: DeleteInterface) {
-  const handleDelete = () => {
-    return console.log("delete data");
+  const deletecategory = useDeleteMutation("kategori", ["kategori-list"]);
+  const [isAlertOpen, setIsAlertOpenChange] = useState(false);
+
+  const handleDelete = async () => {
+    await deletecategory.mutateAsync(
+      {
+        row: "id_kategori",
+        value: id,
+      },
+      {
+        onSuccess: () => {
+          setIsAlertOpenChange(false);
+        },
+      }
+    );
+    // return console.log("delete data");
   };
   return (
-    <AlertDialog>
+    <AlertDialog open={isAlertOpen} onOpenChange={setIsAlertOpenChange}>
       <AlertDialogTrigger>
         <Button variant={"ghost"}>
           <FcEmptyTrash className="h-4 w-4 mx-2" />

@@ -6,11 +6,15 @@ const store = new SteinStore(
 
 export const useSteinData = (sheetName: string) => {
   try {
-    const data = store.read(sheetName);
-    return data;
+    const res = store.read(sheetName, {offset: 2});
+     return res
   } catch (error) {
-    console.error("error fetching data", error);
-    throw error;
+    return {
+      code: 400,
+      success: false,
+      message: "add data failed",
+      data: error,
+    }
   }
 };
 
@@ -94,3 +98,26 @@ export const updateData = async (
     };
   }
 };
+
+export const deleteData = async (sheetname: string, row: string, value: string) => {
+  try {
+    const deleteObject: any = {}
+    deleteObject[row] = value;
+
+    const res = await store.delete(sheetname, { search: deleteObject })
+    
+    return {
+      code: 200,
+      success: true,
+      message: "deleted data successfully",
+      data: res,
+    }
+  } catch (error) {
+    return {
+      code: 400,
+      success: false,
+      message: "update data failed",
+      data: error,
+    }
+  }
+}

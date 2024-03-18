@@ -1,4 +1,4 @@
-import { addData, updateData } from "../fetchingData";
+import { addData, deleteData, updateData } from "../fetchingData";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 
 export function useAddDataMutation(sheetName: string, queryKeyData: string[]) {
@@ -15,11 +15,7 @@ export function useAddDataMutation(sheetName: string, queryKeyData: string[]) {
   });
 }
 
-export function useEditDataMutation(
-  sheetName: string,
-
-  queryKeyData: string[]
-) {
+export function useEditDataMutation(sheetName: string, queryKeyData: string[]) {
   const queryClient = useQueryClient();
 
   return useMutation({
@@ -39,6 +35,20 @@ export function useEditDataMutation(
 
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: queryKeyData });
+    },
+  });
+}
+
+export function useDeleteMutation(sheetName: string, querykeyData: string[]) {
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: ({ row, value }: { row: any; value: any }) => {
+      return deleteData(sheetName, row, value);
+    },
+
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: querykeyData });
     },
   });
 }
