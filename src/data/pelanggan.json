@@ -1,0 +1,332 @@
+[
+  {
+    "id_pelanggan": 1,
+    "nama_pelanggan": "John Doe",
+    "alamat": "Jl. Raya No. 123",
+    "nomor_telepon": "08123456789"
+  },
+  {
+    "id_pelanggan": 2,
+    "nama_pelanggan": "Jane Smith",
+    "alamat": "Jl. Maju No. 45",
+    "nomor_telepon": "08765432100"
+  },
+  {
+    "id_pelanggan": 3,
+    "nama_pelanggan": "Michael Johnson",
+    "alamat": "Jl. Harmoni No. 56",
+    "nomor_telepon": "08111222333"
+  },
+  {
+    "id_pelanggan": 4,
+    "nama_pelanggan": "Emily Davis",
+    "alamat": "Jl. Indah No. 78",
+    "nomor_telepon": "08997776666"
+  },
+  {
+    "id_pelanggan": 5,
+    "nama_pelanggan": "William Wilson",
+    "alamat": "Jl. Mutiara No. 90",
+    "nomor_telepon": "08121234567"
+  },
+  {
+    "id_pelanggan": 6,
+    "nama_pelanggan": "Olivia Brown",
+    "alamat": "Jl. Bahagia No. 12",
+    "nomor_telepon": "08786543210"
+  },
+  {
+    "id_pelanggan": 7,
+    "nama_pelanggan": "Daniel Lee",
+    "alamat": "Jl. Makmur No. 34",
+    "nomor_telepon": "08998887777"
+  },
+  {
+    "id_pelanggan": 8,
+    "nama_pelanggan": "Sophia Taylor",
+    "alamat": "Jl. Sejahtera No. 56",
+    "nomor_telepon": "08133445566"
+  },
+  {
+    "id_pelanggan": 9,
+    "nama_pelanggan": "Ethan Moore",
+    "alamat": "Jl. Harmoni No. 78",
+    "nomor_telepon": "08779991122"
+  },
+  {
+    "id_pelanggan": 10,
+    "nama_pelanggan": "Ava White",
+    "alamat": "Jl. Damai No. 90",
+    "nomor_telepon": "08127894567"
+  },
+  {
+    "id_pelanggan": 11,
+    "nama_pelanggan": "Mia Turner",
+    "alamat": "Jl. Ceria No. 45",
+    "nomor_telepon": "08761234567"
+  },
+  {
+    "id_pelanggan": 12,
+    "nama_pelanggan": "Lucas Allen",
+    "alamat": "Jl. Sentosa No. 23",
+    "nomor_telepon": "08127654321"
+  },
+  {
+    "id_pelanggan": 13,
+    "nama_pelanggan": "Chloe Baker",
+    "alamat": "Jl. Bahagia No. 78",
+    "nomor_telepon": "08998887788"
+  },
+  {
+    "id_pelanggan": 14,
+    "nama_pelanggan": "Jackson Brooks",
+    "alamat": "Jl. Damai No. 56",
+    "nomor_telepon": "08133445577"
+  },
+  {
+    "id_pelanggan": 15,
+    "nama_pelanggan": "Lily Butler",
+    "alamat": "Jl. Mutiara No. 12",
+    "nomor_telepon": "08771234567"
+  },
+  {
+    "id_pelanggan": 16,
+    "nama_pelanggan": "Aiden Campbell",
+    "alamat": "Jl. Indah No. 90",
+    "nomor_telepon": "08129876543"
+  },
+  {
+    "id_pelanggan": 17,
+    "nama_pelanggan": "Harper Carter",
+    "alamat": "Jl. Maju No. 34",
+    "nomor_telepon": "08998887799"
+  },
+  {
+    "id_pelanggan": 18,
+    "nama_pelanggan": "Aria Clark",
+    "alamat": "Jl. Sejahtera No. 67",
+    "nomor_telepon": "08133445588"
+  },
+  {
+    "id_pelanggan": 19,
+    "nama_pelanggan": "Eli Collins",
+    "alamat": "Jl. Harmoni No. 78",
+    "nomor_telepon": "08779991133"
+  },
+  {
+    "id_pelanggan": 20,
+    "nama_pelanggan": "Nora Cooper",
+    "alamat": "Jl. Sentosa No. 45",
+    "nomor_telepon": "08127894444"
+  },
+  {
+    "id_pelanggan": 21,
+    "nama_pelanggan": "Liam Cox",
+    "alamat": "Jl. Bahagia No. 23",
+    "nomor_telepon": "08761239876"
+  },
+  {
+    "id_pelanggan": 22,
+    "nama_pelanggan": "Aurora Davis",
+    "alamat": "Jl. Damai No. 78",
+    "nomor_telepon": "08127653456"
+  },
+  {
+    "id_pelanggan": 23,
+    "nama_pelanggan": "Grayson Diaz",
+    "alamat": "Jl. Mutiara No. 56",
+    "nomor_telepon": "08998887766"
+  },
+  {
+    "id_pelanggan": 24,
+    "nama_pelanggan": "Ella Edwards",
+    "alamat": "Jl. Indah No. 12",
+    "nomor_telepon": "08133445599"
+  },
+  {
+    "id_pelanggan": 25,
+    "nama_pelanggan": "Mason Evans",
+    "alamat": "Jl. Maju No. 90",
+    "nomor_telepon": "08771234598"
+  },
+  {
+    "id_pelanggan": 26,
+    "nama_pelanggan": "Nova Fisher",
+    "alamat": "Jl. Harmoni No. 34",
+    "nomor_telepon": "08129876532"
+  },
+  {
+    "id_pelanggan": 27,
+    "nama_pelanggan": "Carter Foster",
+    "alamat": "Jl. Sejahtera No. 67",
+    "nomor_telepon": "08779991111"
+  },
+  {
+    "id_pelanggan": 28,
+    "nama_pelanggan": "Penelope Garcia",
+    "alamat": "Jl. Sentosa No. 45",
+    "nomor_telepon": "08127896789"
+  },
+  {
+    "id_pelanggan": 29,
+    "nama_pelanggan": "Luna Gardner",
+    "alamat": "Jl. Bahagia No. 23",
+    "nomor_telepon": "08761234456"
+  },
+  {
+    "id_pelanggan": 30,
+    "nama_pelanggan": "Aiden Garrett",
+    "alamat": "Jl. Damai No. 78",
+    "nomor_telepon": "08127653465"
+  },
+  {
+    "id_pelanggan": 31,
+    "nama_pelanggan": "Hazel Gibson",
+    "alamat": "Jl. Mutiara No. 56",
+    "nomor_telepon": "08998887666"
+  },
+  {
+    "id_pelanggan": 32,
+    "nama_pelanggan": "Kai Graham",
+    "alamat": "Jl. Indah No. 12",
+    "nomor_telepon": "08133445578"
+  },
+  {
+    "id_pelanggan": 33,
+    "nama_pelanggan": "Eva Grant",
+    "alamat": "Jl. Maju No. 90",
+    "nomor_telepon": "08771234567"
+  },
+  {
+    "id_pelanggan": 34,
+    "nama_pelanggan": "Leo Gray",
+    "alamat": "Jl. Harmoni No. 34",
+    "nomor_telepon": "08129876321"
+  },
+  {
+    "id_pelanggan": 35,
+    "nama_pelanggan": "Ivy Griffin",
+    "alamat": "Jl. Sejahtera No. 67",
+    "nomor_telepon": "08779991122"
+  },
+  {
+    "id_pelanggan": 36,
+    "nama_pelanggan": "Milo Hale",
+    "alamat": "Jl. Sentosa No. 45",
+    "nomor_telepon": "08127893456"
+  },
+  {
+    "id_pelanggan": 37,
+    "nama_pelanggan": "Aria Harper",
+    "alamat": "Jl. Bahagia No. 23",
+    "nomor_telepon": "08761234578"
+  },
+  {
+    "id_pelanggan": 38,
+    "nama_pelanggan": "Caleb Hart",
+    "alamat": "Jl. Damai No. 78",
+    "nomor_telepon": "08127653456"
+  },
+  {
+    "id_pelanggan": 39,
+    "nama_pelanggan": "Nina Hawkins",
+    "alamat": "Jl. Mutiara No. 56",
+    "nomor_telepon": "08998887755"
+  },
+  {
+    "id_pelanggan": 40,
+    "nama_pelanggan": "Ezra Hayes",
+    "alamat": "Jl. Indah No. 12",
+    "nomor_telepon": "08133445590"
+  },
+  {
+    "id_pelanggan": 41,
+    "nama_pelanggan": "Olive Henderson",
+    "alamat": "Jl. Maju No. 90",
+    "nomor_telepon": "08771234567"
+  },
+  {
+    "id_pelanggan": 42,
+    "nama_pelanggan": "Finn Hogan",
+    "alamat": "Jl. Harmoni No. 34",
+    "nomor_telepon": "08129876321"
+  },
+  {
+    "id_pelanggan": 43,
+    "nama_pelanggan": "Lily Hopkins",
+    "alamat": "Jl. Sejahtera No. 67",
+    "nomor_telepon": "08779991144"
+  },
+  {
+    "id_pelanggan": 44,
+    "nama_pelanggan": "Silas Howell",
+    "alamat": "Jl. Sentosa No. 45",
+    "nomor_telepon": "08127893456"
+  },
+  {
+    "id_pelanggan": 45,
+    "nama_pelanggan": "Lila Hudson",
+    "alamat": "Jl. Bahagia No. 23",
+    "nomor_telepon": "08761234578"
+  },
+  {
+    "id_pelanggan": 46,
+    "nama_pelanggan": "Kai Hughes",
+    "alamat": "Jl. Damai No. 78",
+    "nomor_telepon": "08127653456"
+  },
+  {
+    "id_pelanggan": 47,
+    "nama_pelanggan": "Luna Hunter",
+    "alamat": "Jl. Mutiara No. 56",
+    "nomor_telepon": "08998887755"
+  },
+  {
+    "id_pelanggan": 48,
+    "nama_pelanggan": "Oscar Ingram",
+    "alamat": "Jl. Indah No. 12",
+    "nomor_telepon": "08133445590"
+  },
+  {
+    "id_pelanggan": 49,
+    "nama_pelanggan": "Mila Jacobs",
+    "alamat": "Jl. Maju No. 90",
+    "nomor_telepon": "08771234567"
+  },
+  {
+    "id_pelanggan": 50,
+    "nama_pelanggan": "Isaiah James",
+    "alamat": "Jl. Harmoni No. 34",
+    "nomor_telepon": "08129876321"
+  },
+  {
+    "id_pelanggan": 51,
+    "nama_pelanggan": "Esme Jefferson",
+    "alamat": "Jl. Sejahtera No. 67",
+    "nomor_telepon": "08779991144"
+  },
+  {
+    "id_pelanggan": 52,
+    "nama_pelanggan": "Felix Jenkins",
+    "alamat": "Jl. Sentosa No. 45",
+    "nomor_telepon": "08127893456"
+  },
+  {
+    "id_pelanggan": 53,
+    "nama_pelanggan": "Isla Jennings",
+    "alamat": "Jl. Bahagia No. 23",
+    "nomor_telepon": "08761234578"
+  },
+  {
+    "id_pelanggan": 54,
+    "nama_pelanggan": "Henry Jensen",
+    "alamat": "Jl. Damai No. 78",
+    "nomor_telepon": "08127653456"
+  },
+  {
+    "id_pelanggan": 55,
+    "nama_pelanggan": "Jada Jordan",
+    "alamat": "Jl. Mutiara No. 56",
+    "nomor_telepon": "08998887755"
+  }
+]
