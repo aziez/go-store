@@ -5,7 +5,7 @@ import { columns } from "./columns";
 import { DataTable } from "./data-table";
 import { promises as fs } from "fs";
 import AddData from "./add";
-import { useQuery } from "@tanstack/react-query";
+import { dataTagSymbol, useQuery } from "@tanstack/react-query";
 import { useSteinData } from "@/utils/fetchingData";
 import { TableSkeleton } from "@/components/skeleton/TableSkeleton";
 
@@ -20,6 +20,12 @@ function Categories() {
     staleTime: 1000 * 60 * 60 * 24,
   });
 
+  const filteredCategoryData = categoryData
+    ? categoryData.filter(
+        (item: { nama_kategori: null }) => item.nama_kategori !== null
+      )
+    : [];
+
   return (
     <div className="container mx-auto py-10">
       {isError ? (
@@ -29,7 +35,7 @@ function Categories() {
       ) : (
         <>
           <AddData />
-          <DataTable columns={columns} data={categoryData} />
+          <DataTable columns={columns} data={filteredCategoryData} />
         </>
       )}
     </div>
