@@ -23,27 +23,44 @@ import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 interface FormData {
-  categoryName: string;
+  category_name: any;
+  nama_kategori: string;
 }
 
 import { z } from "zod";
+import { useAddDataMutation } from "@/utils/mutation/useMutationHook";
+import { useState } from "react";
 
 const schema = z.object({
   category_name: z.string().nonempty("Category Name is required"),
 });
 
 function AddData() {
+  const addCategory = useAddDataMutation("kategori", ["kategori-list"]);
+  const [dialogOpen, setDialogOpen] = useState(false);
+
   const form = useForm({
     resolver: zodResolver(schema),
   });
 
-  const onSubmit = (data: FormData) => {
-    // Handle form submission logic here
-    console.log(data);
+  const onSubmit = async (data: FormData) => {
+    const dataSubmit = { nama_kategori: data.category_name };
+
+    await addCategory.mutateAsync(
+      { ...dataSubmit },
+      {
+        onSuccess: () => {
+          setDialogOpen(false);
+          form.reset({
+            category_name: "",
+          });
+        },
+      }
+    );
   };
 
   return (
-    <Dialog>
+    <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
       <DialogTrigger asChild>
         <Button variant={"outline"}>Add Data</Button>
       </DialogTrigger>
