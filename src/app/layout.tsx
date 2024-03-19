@@ -3,6 +3,7 @@ import { Inter as FontSans } from "next/font/google";
 import "@/styles/globals.css";
 import { cn } from "@/lib/utils";
 import Providers from "./provider";
+import NextTopLoader from "nextjs-toploader";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -22,6 +23,16 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
+        <NextTopLoader
+          initialPosition={0.08}
+          crawlSpeed={200}
+          height={3}
+          crawl={true}
+          showSpinner={true}
+          easing="ease"
+          speed={200}
+          shadow="3 3 10px #2299DD,0 0 5px #2299DD"
+        />
         <Providers>{children}</Providers>
       </body>
     </html>
