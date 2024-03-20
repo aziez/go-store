@@ -8,6 +8,9 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { headers } from "next/headers";
+import { createClient } from "@/utils/supabase/client";
+import { useToast } from "@/components/ui/use-toast";
 
 // Define type for form data
 interface RegisterFormValues {
@@ -17,20 +20,19 @@ interface RegisterFormValues {
   confirmPassword: string;
 }
 
-const schema = z.object({
-  email: z.string().email("Invalid email address"),
-  password: z.string().min(6, "Password must be at least 6 characters long"),
-  username: z.string().min(3, "Username must be at least 3 characters long"),
-  confirmPassword: z
-    .string()
-    .refine(
-      (confirmPassword) => confirmPassword === confirmPassword.parent.password,
-      {
-        message: "Passwords do not match",
-        path: ["confirmPassword"],
-      }
-    ),
-});
+const schema = z
+  .object({
+    email: z.string().email("Invalid email address"),
+    password: z.string().min(6, "Password must be at least 6 characters long"),
+    username: z.string().min(3, "Username must be at least 3 characters long"),
+    confirmPassword: z
+      .string()
+      .min(6, { message: "Password must be at least 6 characters" }),
+  })
+  .refine((data) => data.password === data.confirmPassword, {
+    path: ["confirmPassword"],
+    message: "Passwords does not match",
+  });
 
 const RegisterForm: React.FC = () => {
   const {
@@ -39,9 +41,28 @@ const RegisterForm: React.FC = () => {
     formState: { errors },
   } = useForm<RegisterFormValues>({ resolver: zodResolver(schema) });
 
+  const { toast } = useToast();
+  const router = useRouter();
+
   const onSubmit = async (data: RegisterFormValues) => {
-    console.log("Form data:", data);
-    // TODO: Implement registration logic
+    const supabase = createClient();
+    const email = data?.email as string;
+    const password = data?.password as string;
+
+    const { error } = await supabase.auth.signUp({
+      email,
+      password,
+    });
+
+    if (!error) {
+      toast({
+        title: "Register Successfully",
+        description: "Your account has been succesfully register",
+        duration: 1000,
+      });
+
+      router.push("/sign-in");
+    }
   };
 
   return (

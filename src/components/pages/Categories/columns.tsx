@@ -100,7 +100,7 @@ export const columns: ColumnDef<Categories>[] = [
               <AlertDelete id={id} nama_kategori={nama_kategori} />
             </>
             <DropdownMenuSeparator />
-            <Select id_kategori={id} />
+            <Select id_kategori={id} nama_kategori={nama_kategori} />
           </DropdownMenuContent>
         </DropdownMenu>
       );
