@@ -8,6 +8,9 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { headers } from "next/headers";
+import { createClient } from "@/utils/supabase/client";
+import { useToast } from "@/components/ui/use-toast";
 
 // Define type for form data
 interface RegisterFormValues {
@@ -38,9 +41,28 @@ const RegisterForm: React.FC = () => {
     formState: { errors },
   } = useForm<RegisterFormValues>({ resolver: zodResolver(schema) });
 
+  const { toast } = useToast();
+  const router = useRouter();
+
   const onSubmit = async (data: RegisterFormValues) => {
-    console.log("Form data:", data);
-    // TODO: Implement registration logic
+    const supabase = createClient();
+    const email = data?.email as string;
+    const password = data?.password as string;
+
+    const { error } = await supabase.auth.signUp({
+      email,
+      password,
+    });
+
+    if (!error) {
+      toast({
+        title: "Register Successfully",
+        description: "Your account has been succesfully register",
+        duration: 1000,
+      });
+
+      router.push("/sign-in");
+    }
   };
 
   return (

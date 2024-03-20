@@ -15,6 +15,8 @@ import { HiXMark } from "react-icons/hi2";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
+import { createClient } from "@/utils/supabase/client";
+import { Button } from "./ui/button";
 
 const navigation = [
   { name: "Dashboard", href: "/dashboard", icon: FcHome, current: false },
@@ -49,12 +51,25 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
+async function getDataUser() {
+  const supabase = await createClient();
+
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+
+  return user;
+}
+
 export default function Navbar({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const pathname = usePathname();
+  const router = useRouter();
   const [updatedNavigation, setUpdatedNavigation] = useState(navigation);
+
+  const [userData, setDataUser] = useState([]);
 
   useEffect(() => {
     navigation.map((item) => ({
@@ -67,7 +82,23 @@ export default function Navbar({
     }));
 
     setUpdatedNavigation(updatedNav);
+
+    getDataUser().then((user) => {
+      return setDataUser(user);
+    });
   }, [pathname]);
+
+  // console.log(userData);
+
+  const handleSignOut = async () => {
+    const supabase = createClient();
+
+    await supabase.auth.signOut();
+
+    router.push("/sign-in");
+
+    // console.log("sihnOUTTTTT");
+  };
 
   return (
     <>
@@ -174,10 +205,10 @@ export default function Navbar({
                         </div>
                         <div className="ml-3">
                           <p className="text-base font-medium text-white">
-                            Tom Cook
+                            {userData?.email}
                           </p>
                           <p className="text-sm font-medium text-gray-400 group-hover:text-gray-300">
-                            View profile
+                            Logout
                           </p>
                         </div>
                       </div>
@@ -233,7 +264,7 @@ export default function Navbar({
               </nav>
             </div>
             <div className="flex flex-shrink-0 bg-gray-700 p-4">
-              <Link href="#" className="group block w-full flex-shrink-0">
+              <div href="#" className="group block w-full flex-shrink-0">
                 <div className="flex items-center">
                   <div>
                     <Image
@@ -244,14 +275,19 @@ export default function Navbar({
                       alt=""
                     />
                   </div>
-                  <div className="ml-3">
-                    <p className="text-sm font-medium text-white">Tom Cook</p>
-                    <p className="text-xs font-medium text-gray-300 group-hover:text-gray-200">
-                      View profile
+                  <div className="ml-3 flex flex-col">
+                    <p className="text-sm font-medium text-white">
+                      {userData?.email}
                     </p>
+                    <span
+                      onClick={handleSignOut}
+                      className="text-xs cursor-pointer font-medium text-gray-300 group-hover:text-gray-200"
+                    >
+                      Logout
+                    </span>
                   </div>
                 </div>
-              </Link>
+              </div>
             </div>
           </div>
         </div>

@@ -8,6 +8,9 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { createClient } from "@/utils/supabase/client";
+import { useToast } from "@/components/ui/use-toast";
+import { revalidatePath } from "next/cache";
 
 // Define type for form data
 interface LoginFormValues {
@@ -26,21 +29,24 @@ const LoginWithEmail: React.FC = () => {
     handleSubmit,
     formState: { errors },
   } = useForm<LoginFormValues>({ resolver: zodResolver(schema) });
+  const supabase = createClient();
+
+  const { toast } = useToast();
+  const router = useRouter();
 
   const onSubmit = async (data: LoginFormValues) => {
-    console.log("Form data:", data);
-    //
-    //     const { data: dataUser, error } = await supabase.auth.signInWithPassword(
-    //       data
-    //     );
-    //
-    //     if (error) {
-    //       console.error("error", error);
-    //     } else {
-    //       setUserData(dataUser);
-    //       router.push("/dashboard");
-    //       console.log("data login", userData);
-    //     }
+    const { error } = await supabase.auth.signInWithPassword(data);
+
+    if (error) {
+      toast({
+        title: "Invalid Credentials",
+        description: "Your email or password is invalid",
+        variant: "destructive",
+        duration: 1000,
+      });
+    } else {
+      router.push("/dashboard");
+    }
   };
 
   return (
