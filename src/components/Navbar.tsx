@@ -60,7 +60,6 @@ async function getDataUser() {
 
   return user;
 }
-
 export default function Navbar({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
@@ -69,7 +68,7 @@ export default function Navbar({
   const router = useRouter();
   const [updatedNavigation, setUpdatedNavigation] = useState(navigation);
 
-  const [userData, setDataUser] = useState([]);
+  const [userData, setDataUser] = useState<any | null>(null);
 
   useEffect(() => {
     navigation.map((item) => ({
@@ -264,7 +263,7 @@ export default function Navbar({
               </nav>
             </div>
             <div className="flex flex-shrink-0 bg-gray-700 p-4">
-              <div href="#" className="group block w-full flex-shrink-0">
+              <div className="group block w-full flex-shrink-0">
                 <div className="flex items-center">
                   <div>
                     <Image
