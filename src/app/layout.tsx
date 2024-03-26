@@ -11,6 +11,28 @@ const fontSans = FontSans({
   variable: "--font-sans",
 });
 
+export const metadata: Metadata = {
+  title: "Go-store",
+  description: "Store management from go-design store",
+  metadataBase: new URL("https://go-store13.vercel.app/"),
+  authors: [
+    { name: "Abdul Aziz", url: "https://www.linkedin.com/in/aziez13/" },
+  ],
+  keywords: ["store app", "store management", "go-design", "next.js"],
+  openGraph: {
+    title: "go-design store management",
+    description: "official project from go-design store",
+    url: "https://go-store13.vercel.app/",
+    type: "website",
+  },
+  twitter: {
+    site: "@go-design",
+    description: "go-design store",
+    title: "Go-design store app",
+    creator: "@aziz13",
+  },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
