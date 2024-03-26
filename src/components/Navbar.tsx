@@ -100,7 +100,7 @@ export default function Navbar({
   };
 
   return (
-    <>
+    <nav>
       <div>
         <Transition.Root show={sidebarOpen} as={Fragment}>
           <Dialog
@@ -315,6 +315,6 @@ export default function Navbar({
           </main>
         </div>
       </div>
-    </>
+    </nav>
   );
 }
