@@ -29,6 +29,7 @@ const LoginWithEmail: React.FC = () => {
     handleSubmit,
     formState: { errors },
   } = useForm<LoginFormValues>({ resolver: zodResolver(schema) });
+
   const supabase = createClient();
 
   const { toast } = useToast();
